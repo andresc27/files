@@ -60,11 +60,13 @@
                     <img class="img-fluid mb-4 mb-lg-0" src="img/portfolio/nmf/1.png" alt="NLTK">
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-4 text-uppercase mb-4">Main Topic Identification</h1>
+                    <h1 class="display-4 text-uppercase mb-4">Cosmic rays detection</h1>
                     <h5 class="text-uppercase text-primary mb-3">Introduction</h5>
-                    <p class="mb-4">Unstructured text data play a crucial role in people's daily lives. However, the sheer volume of data generated makes it unfeasible to label manually. Therefore, it is necessary to develop a machine learning model to perform this task.</p>
-                    <p class="mb-4">Main Topic Identification helps us cluster data with similar words to assign labels and categorize the data. This can be achieved using various techniques, with one of the most popular being Non-Negative Matrix Factorization (NMF).</p>
-                    <p>NMF creates "k" features from a sparse representation, using a TF-IDF matrix for text. Afterward, we identify the top-10 words for each "k" feature developed. With human inspection of the obtained clusters, we assign labels to the clusters and then apply these labels to all documents.</p>
+                    <p class="mb-4">Cosmic rays are high-energy particles originating from outer space, primarily composed of protons and atomic nuclei. 
+                        When these particles interact with Earth’s atmosphere, they generate extensive air showers (EAS) consisting of secondary particles 
+                        such as muons, electrons, and positrons. </p>
+                    <p class="mb-4">One effective method for detecting these particles is through a Water Cherenkov Detector (WCD), 
+                        which utilizes the Cherenkov radiation produced by charged particles traveling faster than the speed of light in water.</p>
                 </div>                  
             </div>
         </div>
@@ -76,17 +78,19 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-12">
-                        <h5 class="text-uppercase text-primary mb-3">Data information:</h5>
-                        <ol class="mb-4">
+                        <h5 class="text-uppercase text-primary mb-3">Water Cherenkov Detector (WCD) and Signal Processing</h5>
+                        <p class="mb-4">A WCD consists of a large volume of purified water surrounded by photomultiplier tubes (PMTs). 
+                        When a charged particle from an air shower passes through the water, it emits Cherenkov light, which is detected by the PMTs. 
+                        The resulting signal is digitized and analyzed to extract key features such as:</p>
+                        <ul class="mb-4">
                              <!-- añadir un li y un hipervinculo a kaggle -->
-
-                             <li>The data used come from the following <a href="https://www.kaggle.com/datasets/blessondensil294/topic-modeling-for-research-articles">Kaggle data set</a>.</li>
-                            <li> The labels available in the dataset were ignored because the purpose of this project was unsupervised learning. </li>
-                        </ol>
+                            <li>Pulse amplitude (ADC values) – Related to the energy of the particle.</li>
+                            <li>Pulse duration – Helps distinguish between different types of particles.</li>
+                        </ul>
                     </div>
                     
                     <div class="col-lg-12 py-4 bg-light">
-                        <h5 class="text-uppercase text-primary mb-3">Data treatment and modeling</h5>
+                        <h5 class="text-uppercase text-primary mb-3">Forbush Decreases: A Signature of Solar Activity</h5>
                         <ul class="mb-1">
                             <li>Data was loaded and analyzed to determine the types and the presence of null values.</li>
                             <li>The text was cleaned to avoid inconsistencies in the results.</li>
