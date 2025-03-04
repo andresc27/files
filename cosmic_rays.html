@@ -82,7 +82,7 @@
                         <p class="mb-4">A WCD consists of a large volume of purified water surrounded by photomultiplier tubes (PMTs). 
                         When a charged particle from an air shower passes through the water, it emits Cherenkov light, which is detected by the PMTs. 
                         The resulting signal is digitized and analyzed to extract key features such as:</p>
-                        <ul class="mb-4">
+                        <ul class="mb-1">
                              <!-- añadir un li y un hipervinculo a kaggle -->
                             <li>Pulse amplitude (ADC values) – Related to the energy of the particle.</li>
                             <li>Pulse duration – Helps distinguish between different types of particles.</li>
@@ -102,23 +102,24 @@
                             <li>This process was done for the titles and abstrats separately.</li>
                         </ul>                        
 
-                        <div class="col-lg-12 py-4 align-items-center text-center">
-                            <img class="img-fluid mb-lg-3" src="img/portfolio/nmf/2.png" alt="Workflow used">
-                        </div>
-
                     </div>
 
                     <div class="col-lg-12 py-4">
-                        <h5 class="text-uppercase text-primary mb-3">Results</h5>
+                        <h5 class="text-uppercase text-primary mb-3">Data Corrections: Pressure and Temperature Effects</h5>
                         <ul class="mb-4">
-                        
-                        <p>The results shows that the optimal numbers of clusters for the titles were three.</p>
-                        <p>The three topics of the titles identified are math, deep learning, and reinforcement learning.</p>   
-                        <p>Regarding the clustering for the abstracts, the optimal number were four.</p>  
-                        <p>The topics identified for the abstracts were machine learning, data, math, and physics.</p>
+                        <p>The intensity of detected cosmic rays is affected by local atmospheric conditions, primarily pressure and temperature:</p>
+                        <ul class="mb-1">
+                            <li>Pressure Correction: Since cosmic rays must pass through the atmosphere, an increase in pressure results in a denser air column, 
+                                absorbing more particles and reducing the detected flux. This effect is corrected using a barometric coefficient, which 
+                                quantifies the relationship between cosmic ray flux and atmospheric pressure.</li>
+                            <li>Temperature Correction: High-energy muons, a major component of cosmic rays reaching the ground, are produced in the stratosphere. 
+                                The temperature at these altitudes affects muon production and decay rates. 
+                                A temperature coefficient is used to correct for these variations.</li>
+                        </ul> 
                     </div>
 
-                    <a href="https://github.com/sebassaras02/topic_modeling_nmf">Public code is available in the following GitHub repo.</a>
+                    <a href="https://github.com/andresc27/crays_danalysis.git">Code is available in the following GitHub repo. Datasets are private but you can modify the 
+                    the code accordingly.</a>
     
                 </div>
             </div>
