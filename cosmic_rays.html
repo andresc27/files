@@ -91,23 +91,16 @@
                     
                     <div class="col-lg-12 py-4 bg-light">
                         <h5 class="text-uppercase text-primary mb-3">Forbush Decreases: A Signature of Solar Activity</h5>
-                        <ul class="mb-1">
-                            <li>Data was loaded and analyzed to determine the types and the presence of null values.</li>
-                            <li>The text was cleaned to avoid inconsistencies in the results.</li>
-                            <li>All texts were converted to lowercase, and all numbers were removed using regular expressions.</li>
-                            <li>The text was tokenized, stop words were removed, and words with a length of less than 3 characters were eliminated.</li>
-                            <li>The text was lemmatized to reduce redundancy by grouping words with the same root.</li>
-                            <li>Finally, the text was vectorized using the TF-IDF method.</li>
-                            <li>After data preprocessing, the NMF model was trained with k topics. Numerous tests were conducted to find the most suitable "k" clusters.</li>
-                            <li>This process was done for the titles and abstrats separately.</li>
-                        </ul>                        
-
+                         <p class="mb-4">One of the most significant transient effects observed in cosmic ray data is a Forbush decrease (FD), 
+                             a sudden reduction in cosmic ray intensity caused by coronal mass ejections (CMEs) from the Sun. These CMEs carry 
+                             magnetic fields that deflect cosmic rays, leading to a temporary drop in detection rates at ground-based observatories. 
+                             Identifying FDs in WCD data requires continuous monitoring and statistical analysis of cosmic ray flux over time.</p>                        
                     </div>
 
                     <div class="col-lg-12 py-4">
                         <h5 class="text-uppercase text-primary mb-3">Data Corrections: Pressure and Temperature Effects</h5>
                         <ul class="mb-4">
-                        <p>The intensity of detected cosmic rays is affected by local atmospheric conditions, primarily pressure and temperature:</p>
+                        <p class="mb-4">The intensity of detected cosmic rays is affected by local atmospheric conditions, primarily pressure and temperature:</p>
                         <ul class="mb-1">
                             <li>Pressure Correction: Since cosmic rays must pass through the atmosphere, an increase in pressure results in a denser air column, 
                                 absorbing more particles and reducing the detected flux. This effect is corrected using a barometric coefficient, which 
@@ -118,8 +111,21 @@
                         </ul> 
                     </div>
 
+                    <div class="col-lg-12 py-4 bg-light">
+                        <h5 class="text-uppercase text-primary mb-3">Analyzing Cosmic Ray Data</h5>
+                        <p class="mb-4">The main steps in analyzing WCD data for cosmic ray studies include:</p>
+                        <ul class="mb-1">
+                            <li>Preprocessing: Cleaning raw data by removing instrumental noise and identifying valid pulses.</li>
+                            <li>Flux Calculation: Normalizing cosmic ray counts to a standard time interval (e.g., per second or per hour).</li>
+                            <li>Trend Analysis: Identifying long-term trends and short-term fluctuations.</li>
+                            <li>Forbush Decrease Detection: Applying statistical methods (e.g., moving averages, peak detection algorithms) to recognize sudden drops in flux.</li>
+                            <li>Applying Corrections: Using meteorological data to adjust for pressure and temperature variations.</li>
+                        </ul>                        
+
+                    </div>
+
                     <a href="https://github.com/andresc27/crays_danalysis.git">Code is available in the following GitHub repo. Datasets are private but you can modify the 
-                    the code accordingly.</a>
+                    code accordingly.</a>
     
                 </div>
             </div>
