@@ -63,65 +63,84 @@
                     <h1 class="display-4 text-uppercase mb-4">CMS Open Data Workshop</h1>
                     <h5 class="text-uppercase text-primary mb-3">Introduction</h5>
                     <p class="mb-4">
-                        The <strong>CMS Open Data Workshop</strong> provides researchers, students, and enthusiasts with the opportunity to explore real high-energy physics (HEP) data from the Compact Muon Solenoid (CMS) experiment at CERN. 
-                        The workshop introduces participants to key concepts in particle physics, data analysis techniques, and software tools used in CMS research.
+                        The <strong>CMS Open Data Workshop</strong> provides an introduction to high-energy physics data analysis using real collision data from the Compact Muon Solenoid (CMS) experiment at CERN. 
+                        This workshop aims to make scientific data accessible to a broader audience, including students, researchers, and educators, by teaching them how to use CMS Open Data to conduct meaningful analyses.
                     </p>
                     <p class="mb-4">
-                        By working with publicly available data, attendees can gain hands-on experience in reconstructing and analyzing particle collision events, learning how to extract meaningful physics insights using computational methods.
-                    </p>                                      
+                        Participants learn essential tools and methodologies, including data selection, processing, and visualization techniques, using software frameworks such as <strong>ROOT</strong> and <strong>Python</strong>. 
+                        The hands-on exercises guide users through working with real particle physics data and extracting physical observables from reconstructed events.
+                    </p>                                       
                 </div>                               
             </div>
         </div>
     </div>
     <!-- Introduction End -->
-    
-    <!-- CMS Open Data and its Importance -->
+
     <div class="container-fluid">
         <div class="container">
             <div class="row align-items-center">
+                <!-- Section: The Importance of CMS Open Data -->
                 <div class="col-lg-12">
                     <h5 class="text-uppercase text-primary mb-3">The Importance of CMS Open Data</h5>
                     <p class="mb-4">
-                        The CMS experiment generates vast amounts of data from proton-proton collisions at the Large Hadron Collider (LHC). Sharing this data with the public fosters transparency, collaboration, and new scientific discoveries beyond the original research teams.
-                    </p>
-                    <p class="mb-4">
-                        The CMS Open Data initiative allows researchers and educators worldwide to explore fundamental physics, validate previous findings, and develop new analysis techniques. It also serves as an invaluable resource for training future physicists and data scientists in handling large-scale scientific datasets.
+                        CMS Open Data plays a crucial role in advancing transparency and reproducibility in high-energy physics. By making experimental data publicly available, 
+                        the CMS collaboration allows independent researchers and students to explore real collision events, validate scientific results, and develop new analysis techniques.
                     </p>
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- CMS Open Data End -->
-    
-    <!-- Workflow and Results -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row align-items-center">
+
+                <!-- Section: Workflow of the Workshop -->
+                <div class="col-lg-12 py-4 bg-light">
+                    <h5 class="text-uppercase text-primary mb-3">Workflow of the Workshop</h5>
+                    <p class="mb-4">
+                        The workshop follows a structured workflow that includes:
+                        <ul>
+                            <li>Introduction to CMS Open Data and data formats</li>
+                            <li>Hands-on experience with data selection and event filtering</li>
+                            <li>Analysis of reconstructed particles, including electrons and muons</li>
+                            <li>Visualization and interpretation of physics results</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <!-- Section: Results and Findings -->
                 <div class="col-lg-12">
-                    <h5 class="text-uppercase text-primary mb-3">Workflow and Results</h5>
+                    <h5 class="text-uppercase text-primary mb-3">Results and Findings</h5>
                     <p class="mb-4">
-                        The workshop guides participants through the essential steps of CMS data analysis:
-                    </p>
-                    <ul>
-                        <li>Understanding the CMS detector and its components.</li>
-                        <li>Accessing and processing open datasets.</li>
-                        <li>Applying event selection criteria to isolate relevant physics processes.</li>
-                        <li>Extracting and analyzing key variables such as electron and muon properties.</li>
-                        <li>Visualizing and interpreting results to uncover particle interactions.</li>
-                    </ul>
-                    <p class="mb-4">
-                        In particular, the <strong>PhysObjectExtractorTool</strong> was used to extract essential variables from CMS data, focusing on the <code>electron_analyser</code> and <code>muon_analyser</code> modules. 
-                        These analyses help characterize the behavior of electrons and muons, crucial components in studies of the Standard Model and beyond.
-                    </p>
-                    <p class="mb-4">
-                        The results obtained through this workflow enable researchers to reconstruct key events, compare findings with theoretical predictions, and contribute to ongoing high-energy physics studies.
+                        The participants successfully extracted key physics variables from the data, including electron and muon kinematic properties. 
+                        Using the <a href="https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/tree/2015MiniAOD/PhysObjectExtractor/src" target="_blank" rel="noopener noreferrer">PhysObjectExtractorTool</a>, 
+                        they analyzed particle properties and studied fundamental physics processes.
                     </p>
                 </div>
-                <p>The workshop, dataset and instructions can be found <a href="https://cms-opendata-workshop.github.io/2022-08-01-cms-open-data-workshop/" target="_blank">here</a> as well as the instructions about how to use Open Data.</p>
+
+                <!-- Section: My Contribution -->
+                <div class="col-lg-12 py-4 bg-light">
+                    <h5 class="text-uppercase text-primary mb-3">My Contribution</h5>
+                    <p class="mb-4">
+                        I contributed to the workshop by extracting key physics variables for muon and electron objects. Specifically, I worked on modifying the 
+                        <strong>electron_analyser</strong> and <strong>muon_analyser</strong> files in the PhysObjectExtractorTool. These modifications enabled a more detailed study of 
+                        particle kinematics and event selection.
+                    </p>
+                    <p class="mb-4">
+                        To achieve this, I utilized <strong>C++</strong> along with the <strong>ROOT</strong> framework, which is widely used in high-energy physics for data analysis. 
+                        My tasks included:
+                        <ul>
+                            <li>Extracting transverse momentum (pT), pseudorapidity (η), and energy variables.</li>
+                            <li>Extracting additional variables such as <strong>electron veto</strong>, <strong>medium</strong>, <strong>tight</strong>, <strong>MVA</strong>, and <strong>SIP3D</strong>, 
+                                which are crucial for advanced particle identification and background rejection.</li>
+                            <li>Debugging and optimizing C++ code for efficient data extraction.</li>
+                        </ul>
+                    </p>
+                    <p class="mb-4">
+                        Additionally, I contributed to editing the tutorial site, ensuring that the instructional materials were clear and accessible for participants.
+                    </p>
+                </div>
+
+                
+                <p>The workshop, dataset and instructions can be <a href="https://cms-opendata-workshop.github.io/2022-08-01-cms-open-data-workshop/" target="_blank">found here</a> 
+                    as well as the instructions about how to use Open Data.</p>
             </div>
         </div>
     </div>
-    <!-- Workflow and Results End -->
 
 
  
