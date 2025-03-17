@@ -57,7 +57,7 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <img class="img-fluid mb-4 mb-lg-0" src="img/portfolio/cms_detector.png" alt="CMS Detector">
+                    <img class="img-fluid mb-4 mb-lg-0" src="img/01cms_analysis.png" alt="CMS Detector">
                 </div>
                 <div class="col-lg-6">
                     <h1 class="display-4 text-uppercase mb-4">High Energy Physics and Data Science</h1>
@@ -142,6 +142,10 @@
                     <p class="mb-4">
                         The BDT was implemented using <strong>XGBoost</strong> and <strong>Scikit-learn</strong>, leveraging gradient boosting to optimize event classification.
                     </p>
+                    <img src="img/portfolio/cms_analysis/AdaBoost.png" alt="AdaBoost">
+                    <p class="text-muted">AdaBoost classifier results. This method could better distinguish between signal 
+                        and background in simulations. One can see that data is more likely to be background than signal.
+                    </p>
                 </div>
     
                 <!-- Section: Workflow -->
@@ -161,12 +165,16 @@
                     <h5 class="text-uppercase text-primary mb-3">Results</h5>
                     <ul class="mb-4">
                         <li>The analysis successfully replicated key findings from previous studies on four-top-quark production.</li>
-                        <li>The BDT classifier improved the separation between signal and background.</li>
+                        <li>The BDT classifier improved the separation between signal and background. However, it is not expected to find any
+                            4-top quark production due to the low amount of real data, also the proton bunch energy used in the experiment. 
+                        </li>
                         <li>The study provides a framework for using <strong>CMS Open Data</strong> in future research.</li>
                     </ul>
+                    <img src="img/portfolio/cms_analysis/histogram.png" alt="Histogram">
+                    <p class="text-muted">Histogram of Electron pT distributions. Data and simulations fit correctly.</p>
                 </div>
                 <p>The analysis can be run using the <a href="https://swan-k8s.cern.ch/" target="_blank">swan tool</a> provided by CERN. You must be a CMS member.</p>
-                <p>To access the analysis, visit the <a href="https://github.com/andresc27/FourTopsAnalysisCMSOpenData.git" target="_blank">GitHub repository</a>.</p>
+                <p>To access the analysis code, visit the <a href="https://github.com/andresc27/FourTopsAnalysisCMSOpenData.git" target="_blank">GitHub repository</a>.</p>
             </div>
         </div>
     </div>
