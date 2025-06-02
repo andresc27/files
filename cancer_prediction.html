@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Andrés Chicaiza - Physicist|Data Scientist</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <meta content="description" name="Data Science and Artificial Intelligence Consultant">
+    <meta name = "robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white position-relative">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand text-secondary">
+                <h1 class="display-4 text-uppercase">Andrés Chicaiza</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="project.html" class="nav-item nav-link active">Projects</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid bg-primary p-4"></div>
+    <!-- Navbar End -->
+
+
+    <!-- Introduction -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img class="img-fluid mb-4 mb-lg-0" src="img/term_deposit.png" alt="Bank Marketing Data">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-4 text-uppercase mb-4">Data Science and Term Credit Prediction</h1>
+                    <h5 class="text-uppercase text-primary mb-3">Introduction</h5>
+                    <p class="mb-4">
+                        Predicting customer response to term deposit offers is a valuable task in the banking industry. Using data science,
+                        we can analyze historical marketing campaign data and build models that help identify potential customers who are
+                        more likely to subscribe to a term deposit product.
+                    </p>
+                    <p class="mb-4">
+                        This project uses the publicly available <strong><a href="https://archive.ics.uci.edu/dataset/222/bank+marketing" target="_blank" rel="noopener noreferrer">Bank Marketing Dataset</a></strong> from the UCI Machine Learning Repository. The dataset includes client and campaign features that can be used for predictive modeling.
+                    </p>
+                    <p class="mb-4">
+                        By combining exploratory data analysis, data preprocessing, and machine learning algorithms in Python,
+                        we aim to predict whether a client will subscribe to a term deposit (binary classification). Libraries such as
+                        <strong>Pandas</strong>, <strong>Seaborn</strong>, and <strong>Scikit-learn</strong> were essential in performing this analysis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Introduction End -->
+    
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Section: Data Cleaning and Preparation -->
+                <div class="col-lg-12 py-4 bg-light">
+                    <h5 class="text-uppercase text-primary mb-3">Data Cleaning and Preparation</h5>
+                    <p class="mb-4">
+                        The dataset was first loaded and explored using Pandas. Missing values were either filled with appropriate strategies
+                        or dropped based on context. Categorical variables were encoded using one-hot encoding or label encoding as needed.
+                        Non-informative or redundant columns were identified and removed. 
+                    </p>
+                    <p class="mb-4">
+                        Exploratory Data Analysis (EDA) with Seaborn helped in identifying relationships between variables such as age, job,
+                        and previous outcomes, and the target variable (y). This step was critical in feature selection.
+                    </p>
+                </div>
+    
+                <!-- Section: Tools Used -->
+                <div class="col-lg-12">
+                    <h5 class="text-uppercase text-primary mb-3">Tools and Libraries Used</h5>
+                    <ul class="mb-4">
+                        <li><strong>Python:</strong> Main programming language.</li>
+                        <li><strong>Pandas & NumPy:</strong> Data cleaning, manipulation, and numerical operations.</li>
+                        <li><strong>Seaborn & Matplotlib:</strong> Visualization and correlation analysis.</li>
+                        <li><strong>Scikit-learn:</strong> Machine learning models and preprocessing tools.</li>
+                    </ul>
+                </div>
+    
+                <!-- Section: Machine Learning Models -->
+                <div class="col-lg-12 py-4 bg-light">
+                    <h5 class="text-uppercase text-primary mb-3">Machine Learning Models</h5>
+                    <p class="mb-4">
+                        After preparing the dataset, several machine learning algorithms were tested to predict whether a client would
+                        subscribe to a term deposit. These included:
+                    </p>
+                    <ul class="mb-4">
+                        <li><strong>Decision Trees:</strong> Useful for interpreting how different variables affect the prediction.</li>
+                        <li><strong>Logistic Regression:</strong> A baseline linear model for binary classification.</li>
+                        <li><strong>Random Forests:</strong> An ensemble method used to improve accuracy and reduce overfitting.</li>
+                    </ul>
+                    <p class="mb-4">
+                        Model performance was evaluated using accuracy, precision, recall, and ROC-AUC score. Cross-validation was used to
+                        ensure the results were robust.
+                    </p>
+                </div>
+    
+                <!-- Section: Workflow -->
+                <div class="col-lg-12">
+                    <h5 class="text-uppercase text-primary mb-3">Workflow</h5>
+                    <ol class="mb-4">
+                        <li><strong>Data Loading:</strong> Load and inspect the Bank Marketing dataset using Pandas.</li>
+                        <li><strong>Cleaning:</strong> Handle missing values, drop or transform columns as needed.</li>
+                        <li><strong>Exploratory Analysis:</strong> Use Seaborn and Matplotlib to identify relevant features.</li>
+                        <li><strong>Feature Engineering:</strong> Encode categorical variables and scale numeric features.</li>
+                        <li><strong>Modeling:</strong> Train and evaluate models using Scikit-learn.</li>
+                        <li><strong>Interpretation:</strong> Compare results and determine which model performs best.</li>
+                    </ol>
+                    <img src="img/mutual_information.png" alt="Mutual Information Chart" style="width: 15cm; height: 10cm;">
+                    <p class="text-muted">Visualization of mutual information between predictor variables and the target variable. 
+                        This chart helps identify which features are most strongly related to the decision to subscribe to a term deposit, 
+                        guiding the selection of relevant variables for machine learning models.</p>
+                </div>
+    
+                <!-- Section: Results -->
+                <div class="col-lg-12 py-4 bg-light">
+                    <h5 class="text-uppercase text-primary mb-3">Results</h5>
+                    <ul class="mb-4">
+                        <li>Logistic regression served as a solid baseline with interpretable coefficients.</li>
+                        <li>Decision trees provided better insight into which features were most impactful (e.g., contact month, previous outcome).</li>
+                        <li>Random forests achieved the best performance with higher overall accuracy and ROC-AUC.</li>
+                        <li>The project highlights the usefulness of open banking data and reproducible workflows in predictive modeling.</li>
+                    </ul>
+                    <img src="img/portfolio/term_credit/roc_curve.png" alt="ROC Curve" style="width: 10cm; height: auto;">
+                    <p class="text-muted">ROC Curve showing model performance for term credit subscription prediction.</p>
+                </div>
+                <p>You can explore or reproduce this project by checking out the <a href="https://github.com/yourusername/TermCreditPrediction" target="_blank">GitHub repository</a>.</p>
+            </div>
+        </div>
+    </div>
+
+
+ 
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0 mt-n2 text-white display-4">Andrés</h1>
+                    <h1 class="m-0 mt-n2 text-white display-4">Chicaiza</h1>
+                </a>
+                <!--  <p>Follow me on my social media channels to know more about my projects.</p>  
+                <h6 class="text-uppercase text-white py-2">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>-->
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-white mb-4">Get In Touch</h4>
+                <!-- <p><i class="fa fa-map-marker-alt text-white mr-2"></i>Pujilí, Cotopaxi, Ecuador</p> -->
+                <p><i class="fa fa-envelope text-white mr-2"></i>cc.lac@proton.me</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-uppercase text-white mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="index.html"><i class="fa fa-angle-right text-white mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href="about.html"><i class="fa fa-angle-right text-white mr-2"></i>About Me</a>
+                    <a class="text-white-50 mb-2" href="project.html"><i class="fa fa-angle-right text-white mr-2"></i>Projects</a>
+                    <a class="text-white-50" href="contact.html"><i class="fa fa-angle-right text-white mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #000000;">
+        <p class="mb-2 text-center text-white-50">&copy; <a href="#">Andrés Chicaiza</a>. All Rights Reserved.</p>
+        <p class="m-0 text-center text-white-50">Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
+        <p class="m-0 text-center text-white-50">Edited by Andrés Chicaiza</a></p>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
