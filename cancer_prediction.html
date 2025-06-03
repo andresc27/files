@@ -53,28 +53,27 @@
 
 
     <!-- Introduction -->
-    <!-- ======================== -->
-    <!-- Proyecto: Clasificación de Cáncer de Mama (ES) -->
-    <!-- ======================== -->
-    <div class="container-fluid py-5" id="breast-cancer-es">
+    <!-- Spanish Version -->
+    <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <img class="img-fluid mb-4 mb-lg-0" src="img/breast_cancer.png" alt="Datos de Cáncer de Mama">
+                    <img class="img-fluid mb-4 mb-lg-0" src="img/breast_cancer.png" alt="Predicción de cáncer de mama">
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-4 text-uppercase mb-4">Clasificación de Cáncer de Mama con Regresión Logística</h1>
+                    <h1 class="display-4 text-uppercase mb-4">Predicción de Cáncer de Mama con Regresión Logística</h1>
                     <h5 class="text-uppercase text-primary mb-3">Introducción</h5>
                     <p class="mb-4">
-                        La predicción temprana de tumores malignos es crucial para mejorar los protocolos de diagnóstico y tratamiento oncológico.
-                        Utilizando ciencia de datos, analizamos el <strong><a href="https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic" target="_blank" rel="noopener noreferrer">conjunto de datos de cáncer de mama de Wisconsin</a></strong>,
-                        construyendo un modelo de regresión logística que <strong>predice si el tumor es maligno o benigno</strong>.
+                        El cáncer de mama es uno de los más comunes en el mundo. Un diagnóstico temprano puede salvar vidas.
+                        En este proyecto usamos aprendizaje automático para predecir si un tumor es benigno o maligno
+                        basándonos en características extraídas de imágenes médicas.
                     </p>
                     <p class="mb-4">
-                        El proyecto valida la eficacia de la regresión logística tras un cuidadoso preprocesamiento de datos y destaca el uso de <strong>Pandas</strong>, <strong>Seaborn</strong> y <strong>Scikit-learn</strong> para análisis y modelado.
+                        Trabajamos con el <strong><a href="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html" target="_blank">conjunto de datos Breast Cancer Wisconsin</a></strong> disponible en Scikit-learn.
                     </p>
-                    <p class="mb-0">
-                        Código y notebook disponibles en <a href="https://github.com/andresc27/cancer_prediction/blob/main/Cancer_prediction.ipynb" target="_blank" rel="noopener noreferrer">GitHub</a>.
+                    <p class="mb-4">
+                        El enfoque está en aplicar regresión logística, ajustar hiperparámetros con GridSearchCV,
+                        y visualizar los coeficientes del modelo para entender el impacto de cada variable.
                     </p>
                 </div>
             </div>
@@ -84,16 +83,15 @@
     <div class="container-fluid">
         <div class="container">
             <div class="row align-items-center">
-                <!-- Limpieza y Preparación de Datos -->
+                <!-- Preparación de Datos -->
                 <div class="col-lg-12 py-4 bg-light">
                     <h5 class="text-uppercase text-primary mb-3">Limpieza y Preparación de Datos</h5>
                     <p class="mb-4">
-                        Se exploró y cargó el dataset con Pandas. Los valores faltantes se imputaron o descartaron según el contexto.
-                        Las variables categóricas (por ejemplo, diagnóstico) se codificaron mediante label encoding.
-                        Se normalizaron las características numéricas para facilitar la convergencia del modelo.
+                        El conjunto de datos está limpio y bien estructurado. Las variables están estandarizadas y la variable objetivo es binaria (0 = benigno, 1 = maligno).
+                        Para abordar el desbalance de clases, aplicamos SMOTE (Synthetic Minority Over-sampling Technique).
                     </p>
-                    <p class="mb-0">
-                        El Análisis Exploratorio de Datos (EDA) con Seaborn permitió identificar correlaciones entre características morfológicas y la malignidad del tumor.
+                    <p class="mb-4">
+                        El análisis exploratorio permitió identificar las variables más relevantes y su distribución entre clases.
                     </p>
                 </div>
     
@@ -101,56 +99,49 @@
                 <div class="col-lg-12">
                     <h5 class="text-uppercase text-primary mb-3">Herramientas y Librerías</h5>
                     <ul class="mb-4">
-                        <li><strong>Python:</strong> Lenguaje principal.</li>
-                        <li><strong>Pandas & NumPy:</strong> Limpieza y manipulación de datos.</li>
-                        <li><strong>Seaborn & Matplotlib:</strong> Visualización y análisis de correlaciones.</li>
-                        <li><strong>Scikit-learn:</strong> Modelado y validación.</li>
+                        <li><strong>Python</strong></li>
+                        <li><strong>Pandas, NumPy</strong></li>
+                        <li><strong>Matplotlib, Seaborn</strong></li>
+                        <li><strong>Scikit-learn</strong></li>
+                        <li><strong>Imbalanced-learn (SMOTE)</strong></li>
                     </ul>
                 </div>
     
-                <!-- Modelos de Machine Learning -->
+                <!-- Modelado -->
                 <div class="col-lg-12 py-4 bg-light">
-                    <h5 class="text-uppercase text-primary mb-3">Modelos de Machine Learning</h5>
+                    <h5 class="text-uppercase text-primary mb-3">Aprendizaje Automático</h5>
                     <p class="mb-4">
-                        Se compararon múltiples algoritmos, destacándose:
+                        Entrenamos un modelo de regresión logística usando GridSearchCV para ajustar hiperparámetros como C, penalty y solver.
+                        El modelo logró un rendimiento excelente sobre los datos de prueba:
                     </p>
                     <ul class="mb-4">
-                        <li><strong>Regresión Logística:</strong> Modelo base y altamente interpretable.</li>
-                        <li><strong>SVM:</strong> Captura relaciones no lineales.</li>
-                        <li><strong>Random Forest:</strong> Mejora la precisión y reduce el sobreajuste.</li>
+                        <li>Precisión: 96%</li>
+                        <li>ROC-AUC: 0.996</li>
+                        <li>Precisión y Recall equilibrados entre clases</li>
                     </ul>
-                    <p class="mb-0">
-                        La validación cruzada y la métrica ROC-AUC demostraron que la regresión logística ofrece un rendimiento competitivo con gran interpretabilidad.
-                    </p>
                 </div>
     
-                <!-- Flujo de Trabajo -->
+                <!-- Interpretación -->
                 <div class="col-lg-12">
-                    <h5 class="text-uppercase text-primary mb-3">Flujo de Trabajo</h5>
-                    <ol class="mb-4">
-                        <li><strong>Carga de Datos:</strong> Importar y explorar el dataset.</li>
-                        <li><strong>Preprocesamiento:</strong> Imputación, normalización y codificación.</li>
-                        <li><strong>Análisis Exploratorio:</strong> Visualizar correlaciones clave.</li>
-                        <li><strong>Ingeniería de Características:</strong> Seleccionar variables relevantes.</li>
-                        <li><strong>Modelado:</strong> Entrenar y evaluar modelos.</li>
-                        <li><strong>Interpretación:</strong> Analizar coeficientes y métricas.</li>
-                    </ol>
-                    <img src="img/portfolio/breast_cancer/feature_importance.png" alt="Importancia de Características" style="width: 15cm; height: 10cm;">
-                    <p class="text-muted">Gráfico de importancia de características para el modelo de regresión logística.</p>
+                    <h5 class="text-uppercase text-primary mb-3">Interpretación</h5>
+                    <p class="mb-4">
+                        Se analizaron los coeficientes para entender la importancia de cada variable.
+                        Las 10 más influyentes fueron visualizadas en una gráfica de barras horizontal.
+                    </p>
+                    <img src="img/portfolio/breast_cancer/coefficients.png" alt="Coeficientes de Variables" style="width: 12cm; height: auto;">
                 </div>
     
                 <!-- Resultados -->
                 <div class="col-lg-12 py-4 bg-light">
                     <h5 class="text-uppercase text-primary mb-3">Resultados</h5>
                     <ul class="mb-4">
-                        <li>Precisión superior al 97&nbsp;% utilizando regresión logística.</li>
-                        <li>Alta interpretabilidad a través de los coeficientes del modelo.</li>
-                        <li>SVM alcanzó ROC-AUC marginalmente mayor, pero con menor interpretabilidad.</li>
-                        <li>El pipeline reproducible facilita su integración en flujos clínicos.</li>
+                        <li>SMOTE ayudó a balancear efectivamente el conjunto de datos.</li>
+                        <li>La regresión logística fue efectiva e interpretable.</li>
+                        <li>El modelo generaliza bien, con un alto valor de ROC-AUC.</li>
+                        <li>Este análisis demuestra el poder de modelos simples cuando hay buena preparación de datos.</li>
                     </ul>
-                    <img src="img/portfolio/breast_cancer/roc_curve.png" alt="Curva ROC" style="width: 10cm; height: auto;">
-                    <p class="text-muted">Curva ROC comparativa de modelos para la predicción de tumores malignos.</p>
                 </div>
+                <p>Puedes explorar o reproducir este proyecto en <a href="https://github.com/yourusername/BreastCancerPrediction" target="_blank">GitHub</a>.</p>
             </div>
         </div>
     </div>
