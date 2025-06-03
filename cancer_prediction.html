@@ -53,114 +53,107 @@
 
 
     <!-- Introduction -->
-    <div class="container-fluid py-5">
+    <!-- ======================== -->
+    <!-- Proyecto: Clasificación de Cáncer de Mama (ES) -->
+    <!-- ======================== -->
+    <div class="container-fluid py-5" id="breast-cancer-es">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <img class="img-fluid mb-4 mb-lg-0" src="img/term_deposit.png" alt="Bank Marketing Data">
+                    <img class="img-fluid mb-4 mb-lg-0" src="img/breast_cancer.png" alt="Datos de Cáncer de Mama">
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-4 text-uppercase mb-4">Data Science and Term Credit Prediction</h1>
-                    <h5 class="text-uppercase text-primary mb-3">Introduction</h5>
+                    <h1 class="display-4 text-uppercase mb-4">Clasificación de Cáncer de Mama con Regresión Logística</h1>
+                    <h5 class="text-uppercase text-primary mb-3">Introducción</h5>
                     <p class="mb-4">
-                        Predicting customer response to term deposit offers is a valuable task in the banking industry. Using data science,
-                        we can analyze historical marketing campaign data and build models that help identify potential customers who are
-                        more likely to subscribe to a term deposit product.
+                        La predicción temprana de tumores malignos es crucial para mejorar los protocolos de diagnóstico y tratamiento oncológico.
+                        Utilizando ciencia de datos, analizamos el <strong><a href="https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic" target="_blank" rel="noopener noreferrer">conjunto de datos de cáncer de mama de Wisconsin</a></strong>,
+                        construyendo un modelo de regresión logística que <strong>predice si el tumor es maligno o benigno</strong>.
                     </p>
                     <p class="mb-4">
-                        This project uses the publicly available <strong><a href="https://archive.ics.uci.edu/dataset/222/bank+marketing" target="_blank" rel="noopener noreferrer">Bank Marketing Dataset</a></strong> from the UCI Machine Learning Repository. The dataset includes client and campaign features that can be used for predictive modeling.
+                        El proyecto valida la eficacia de la regresión logística tras un cuidadoso preprocesamiento de datos y destaca el uso de <strong>Pandas</strong>, <strong>Seaborn</strong> y <strong>Scikit-learn</strong> para análisis y modelado.
                     </p>
-                    <p class="mb-4">
-                        By combining exploratory data analysis, data preprocessing, and machine learning algorithms in Python,
-                        we aim to predict whether a client will subscribe to a term deposit (binary classification). Libraries such as
-                        <strong>Pandas</strong>, <strong>Seaborn</strong>, and <strong>Scikit-learn</strong> were essential in performing this analysis.
+                    <p class="mb-0">
+                        Código y notebook disponibles en <a href="https://github.com/andresc27/cancer_prediction/blob/main/Cancer_prediction.ipynb" target="_blank" rel="noopener noreferrer">GitHub</a>.
                     </p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Introduction End -->
     
     <div class="container-fluid">
         <div class="container">
             <div class="row align-items-center">
-                <!-- Section: Data Cleaning and Preparation -->
+                <!-- Limpieza y Preparación de Datos -->
                 <div class="col-lg-12 py-4 bg-light">
-                    <h5 class="text-uppercase text-primary mb-3">Data Cleaning and Preparation</h5>
+                    <h5 class="text-uppercase text-primary mb-3">Limpieza y Preparación de Datos</h5>
                     <p class="mb-4">
-                        The dataset was first loaded and explored using Pandas. Missing values were either filled with appropriate strategies
-                        or dropped based on context. Categorical variables were encoded using one-hot encoding or label encoding as needed.
-                        Non-informative or redundant columns were identified and removed. 
+                        Se exploró y cargó el dataset con Pandas. Los valores faltantes se imputaron o descartaron según el contexto.
+                        Las variables categóricas (por ejemplo, diagnóstico) se codificaron mediante label encoding.
+                        Se normalizaron las características numéricas para facilitar la convergencia del modelo.
                     </p>
-                    <p class="mb-4">
-                        Exploratory Data Analysis (EDA) with Seaborn helped in identifying relationships between variables such as age, job,
-                        and previous outcomes, and the target variable (y). This step was critical in feature selection.
+                    <p class="mb-0">
+                        El Análisis Exploratorio de Datos (EDA) con Seaborn permitió identificar correlaciones entre características morfológicas y la malignidad del tumor.
                     </p>
                 </div>
     
-                <!-- Section: Tools Used -->
+                <!-- Herramientas Utilizadas -->
                 <div class="col-lg-12">
-                    <h5 class="text-uppercase text-primary mb-3">Tools and Libraries Used</h5>
+                    <h5 class="text-uppercase text-primary mb-3">Herramientas y Librerías</h5>
                     <ul class="mb-4">
-                        <li><strong>Python:</strong> Main programming language.</li>
-                        <li><strong>Pandas & NumPy:</strong> Data cleaning, manipulation, and numerical operations.</li>
-                        <li><strong>Seaborn & Matplotlib:</strong> Visualization and correlation analysis.</li>
-                        <li><strong>Scikit-learn:</strong> Machine learning models and preprocessing tools.</li>
+                        <li><strong>Python:</strong> Lenguaje principal.</li>
+                        <li><strong>Pandas & NumPy:</strong> Limpieza y manipulación de datos.</li>
+                        <li><strong>Seaborn & Matplotlib:</strong> Visualización y análisis de correlaciones.</li>
+                        <li><strong>Scikit-learn:</strong> Modelado y validación.</li>
                     </ul>
                 </div>
     
-                <!-- Section: Machine Learning Models -->
+                <!-- Modelos de Machine Learning -->
                 <div class="col-lg-12 py-4 bg-light">
-                    <h5 class="text-uppercase text-primary mb-3">Machine Learning Models</h5>
+                    <h5 class="text-uppercase text-primary mb-3">Modelos de Machine Learning</h5>
                     <p class="mb-4">
-                        After preparing the dataset, several machine learning algorithms were tested to predict whether a client would
-                        subscribe to a term deposit. These included:
+                        Se compararon múltiples algoritmos, destacándose:
                     </p>
                     <ul class="mb-4">
-                        <li><strong>Decision Trees:</strong> Useful for interpreting how different variables affect the prediction.</li>
-                        <li><strong>Logistic Regression:</strong> A baseline linear model for binary classification.</li>
-                        <li><strong>Random Forests:</strong> An ensemble method used to improve accuracy and reduce overfitting.</li>
+                        <li><strong>Regresión Logística:</strong> Modelo base y altamente interpretable.</li>
+                        <li><strong>SVM:</strong> Captura relaciones no lineales.</li>
+                        <li><strong>Random Forest:</strong> Mejora la precisión y reduce el sobreajuste.</li>
                     </ul>
-                    <p class="mb-4">
-                        Model performance was evaluated using accuracy, precision, recall, and ROC-AUC score. Cross-validation was used to
-                        ensure the results were robust.
+                    <p class="mb-0">
+                        La validación cruzada y la métrica ROC-AUC demostraron que la regresión logística ofrece un rendimiento competitivo con gran interpretabilidad.
                     </p>
                 </div>
     
-                <!-- Section: Workflow -->
+                <!-- Flujo de Trabajo -->
                 <div class="col-lg-12">
-                    <h5 class="text-uppercase text-primary mb-3">Workflow</h5>
+                    <h5 class="text-uppercase text-primary mb-3">Flujo de Trabajo</h5>
                     <ol class="mb-4">
-                        <li><strong>Data Loading:</strong> Load and inspect the Bank Marketing dataset using Pandas.</li>
-                        <li><strong>Cleaning:</strong> Handle missing values, drop or transform columns as needed.</li>
-                        <li><strong>Exploratory Analysis:</strong> Use Seaborn and Matplotlib to identify relevant features.</li>
-                        <li><strong>Feature Engineering:</strong> Encode categorical variables and scale numeric features.</li>
-                        <li><strong>Modeling:</strong> Train and evaluate models using Scikit-learn.</li>
-                        <li><strong>Interpretation:</strong> Compare results and determine which model performs best.</li>
+                        <li><strong>Carga de Datos:</strong> Importar y explorar el dataset.</li>
+                        <li><strong>Preprocesamiento:</strong> Imputación, normalización y codificación.</li>
+                        <li><strong>Análisis Exploratorio:</strong> Visualizar correlaciones clave.</li>
+                        <li><strong>Ingeniería de Características:</strong> Seleccionar variables relevantes.</li>
+                        <li><strong>Modelado:</strong> Entrenar y evaluar modelos.</li>
+                        <li><strong>Interpretación:</strong> Analizar coeficientes y métricas.</li>
                     </ol>
-                    <img src="img/mutual_information.png" alt="Mutual Information Chart" style="width: 15cm; height: 10cm;">
-                    <p class="text-muted">Visualization of mutual information between predictor variables and the target variable. 
-                        This chart helps identify which features are most strongly related to the decision to subscribe to a term deposit, 
-                        guiding the selection of relevant variables for machine learning models.</p>
+                    <img src="img/portfolio/breast_cancer/feature_importance.png" alt="Importancia de Características" style="width: 15cm; height: 10cm;">
+                    <p class="text-muted">Gráfico de importancia de características para el modelo de regresión logística.</p>
                 </div>
     
-                <!-- Section: Results -->
+                <!-- Resultados -->
                 <div class="col-lg-12 py-4 bg-light">
-                    <h5 class="text-uppercase text-primary mb-3">Results</h5>
+                    <h5 class="text-uppercase text-primary mb-3">Resultados</h5>
                     <ul class="mb-4">
-                        <li>Logistic regression served as a solid baseline with interpretable coefficients.</li>
-                        <li>Decision trees provided better insight into which features were most impactful (e.g., contact month, previous outcome).</li>
-                        <li>Random forests achieved the best performance with higher overall accuracy and ROC-AUC.</li>
-                        <li>The project highlights the usefulness of open banking data and reproducible workflows in predictive modeling.</li>
+                        <li>Precisión superior al 97&nbsp;% utilizando regresión logística.</li>
+                        <li>Alta interpretabilidad a través de los coeficientes del modelo.</li>
+                        <li>SVM alcanzó ROC-AUC marginalmente mayor, pero con menor interpretabilidad.</li>
+                        <li>El pipeline reproducible facilita su integración en flujos clínicos.</li>
                     </ul>
-                    <img src="img/portfolio/term_credit/roc_curve.png" alt="ROC Curve" style="width: 10cm; height: auto;">
-                    <p class="text-muted">ROC Curve showing model performance for term credit subscription prediction.</p>
+                    <img src="img/portfolio/breast_cancer/roc_curve.png" alt="Curva ROC" style="width: 10cm; height: auto;">
+                    <p class="text-muted">Curva ROC comparativa de modelos para la predicción de tumores malignos.</p>
                 </div>
-                <p>You can explore or reproduce this project by checking out the <a href="https://github.com/yourusername/TermCreditPrediction" target="_blank">GitHub repository</a>.</p>
             </div>
         </div>
     </div>
-
 
  
     <!-- Footer Start -->
